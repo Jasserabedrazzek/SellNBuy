@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell And Buy</title>
+    <link rel="stylesheet" href="/lib/css/style.css">
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon">
+    <script src="/lib/js/form.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main id="main" class="main">
+  <nav class="navbar navbar-expand-lg bg-primary position-static">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="#">Sell And Buy</a>
+      <button class="navbar-toggler border-light" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon text-light"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active text-light" aria-current="page" href="/">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#link">Mon Compte</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Autre
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/ar/buy">Vente</a></li>
+              <li><a class="dropdown-item" href="/ar/buy/">Arabic</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Déconnexion</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Rechercher" aria-label="Search">
+          <button class="btn btn-outline-light" type="submit">Rechercher</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <form onsubmit="return false" class="uploader-content container mt-4">
+    <div class="mb-3">
+      <label for="formFile" class="form-label">Importer une image du produit</label>
+      <input class="form-control" required type="file" id="formFile">
+    </div>
+    <div class="card" style="display: none;" id="img-uploaded">
+      <img src="" class="img-thumbnail" alt="Image téléchargée">
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text">Nom du Produit</span>
+      <input type="text" class="form-control" required>
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text">Nom et Prénom</span>
+      <input type="text" class="form-control" required>
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text">Description</span>
+      <textarea class="form-control" required style="height: 200px; resize: none;"></textarea>
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text">Prix</span>
+      <input type="number" class="form-control" required>
+      <span class="input-group-text">DT</span>
+    </div>
+    <div class="form-floating">
+        <select required class="form-select" id="floatingSelect" name="category" aria-label="Categories">
+            <option selected>Categories</option>
+            <option value="electronique">Électronique</option>
+            <option value="vetement">Vètements</option>
+            <option value="voiture">Voitures</option>
+            <option value="maison">Maison</option>
+        </select>
+        <label for="floatingSelect">Categories</label>
+    </div>
+    <div class="buttons d-flex justify-content-around align-items-center w-100 p-2">
+      <input type="submit" value="Enregistrer" class="btn btn-primary">
+      <input type="reset" value="Annuler" class="btn btn-danger">
+    </div>
+  </form>
+  <footer class="bg-primary text-light text-center py-3 mt-5">
+            &copy; 2025 Sell And Buy. Tous droits réservés.
+          </footer>
+</main>
+
+</body>
+</html>
